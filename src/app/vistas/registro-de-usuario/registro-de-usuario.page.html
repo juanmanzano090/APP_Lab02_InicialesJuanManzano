@@ -1,0 +1,29 @@
+<app-header titulo="Registro de Usuario"></app-header> 
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+          <ion-item color="primary">
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" name="nombre" [(ngModel)]="datos_formulario.nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input type="text" name="apellido" [(ngModel)]="datos_formulario.apellido"></ion-input>
+          </ion-item>
+          <ion-item color="primary">
+            <ion-label position="floating">RUT</ion-label>
+            <ion-input type="text" name="rut" [(ngModel)]="datos_formulario.rut"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="text" name="correo" [(ngModel)]="datos_formulario.correo"></ion-input>
+          </ion-item>
+          <ion-item color="primary" >
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="text" name="password" [(ngModel)]="datos_formulario.password"></ion-input>
+          </ion-item><br>
+        </ion-card-content>
+      </ion-card>
+      <ion-button (click)="enviarDatos()" expand="full">Registrar</ion-button>
+
+    </ion-content>

@@ -1,0 +1,24 @@
+<app-header titulo="Listar Usuario"></app-header> 
+
+<ion-content>
+    
+        <ion-card  color="primary" mode= "ios" *ngFor="let dato_obtenido of datos_obtenidos">
+            <ion-item>
+                Nombre: {{dato_obtenido.nombre}}
+            </ion-item>
+            <ion-item >
+                Apellido: {{dato_obtenido.apellido}}
+            </ion-item>
+            <ion-item>
+                RUT: {{dato_obtenido.rut}}
+            </ion-item>
+            <ion-item>
+                Correo: {{dato_obtenido.correo}}
+            </ion-item>
+            <ion-item>
+                Password: {{dato_obtenido.password}}
+            </ion-item>
+        </ion-card>
+     
+
+</ion-content>
