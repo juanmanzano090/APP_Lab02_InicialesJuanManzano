@@ -1,5 +1,28 @@
 <app-header titulo="Registro de Egresos"></app-header> 
 
 <ion-content>
-
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Formulario de registro de egresos</ion-card-subtitle>
+            <ion-card-title>Egresos</ion-card-title>
+         </ion-card-header>
+        <ion-card-content>
+            <ion-item>
+                <ion-label position="floating">Descripcion: </ion-label>
+                <ion-input type="text" name="descripcion" [(ngModel)]="datos_egreso.descripcion"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Precio: </ion-label>
+                <ion-input type="number" name="precio" [(ngModel)]="datos_egreso.precio"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-select [(ngModel)]="datos_egreso.id_usuario" placeholder="Seleccionar">
+                    <ion-select-option *ngFor="let dato_obtenido of datos_obtenidos"
+                     [value]="dato_obtenido._id" >{{dato_obtenido.nombre}}
+                    </ion-select-option>
+                 </ion-select>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-button (click)="enviarEgreso()" expand="full">Registrar</ion-button>
 </ion-content>

@@ -13,10 +13,10 @@ export class ListarUsuariosPage implements OnInit {
   ngOnInit() {
   }
   ionViewWillEnter(){
-    this.obtenerDatosFormulario();
+    this.obtenerDatosUsuario();
   }
-  obtenerDatosFormulario(){
-  this.formulaService.obtenerDatosFormulario().subscribe(
+  obtenerDatosUsuario(){
+  this.formulaService.obtenerDatosUsuario().subscribe(
     (response:any)=> {
       this.datos_obtenidos = response.usuarios;
       console.log(this.datos_obtenidos)

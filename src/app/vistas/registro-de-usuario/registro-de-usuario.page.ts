@@ -18,9 +18,9 @@ export class EnviarDatos{
   styleUrls: ['./registro-de-usuario.page.scss'],
 })
 export class RegistroDeUsuarioPage implements OnInit {
-  datos_formulario;
+  datos_usuario;
   constructor(private formulaService : FormulaService ) { 
-    this.datos_formulario = new EnviarDatos("","","","","")
+    this.datos_usuario = new EnviarDatos("","","","","")
   }
 
   ngOnInit() {
@@ -29,7 +29,7 @@ export class RegistroDeUsuarioPage implements OnInit {
   enviarDatos(){
 
 
-    this.formulaService.registroformulario(this.datos_formulario).subscribe(
+    this.formulaService.registrousuario(this.datos_usuario).subscribe(
       (response:any)=>{
         if(response.usuario){
           alert("datos registrados correctamente")
@@ -42,7 +42,7 @@ export class RegistroDeUsuarioPage implements OnInit {
       }
     )
 
-    console.log("Datos del formulario: ", this.datos_formulario);
+    console.log("Datos del formulario: ", this.datos_usuario);
   }
 
 

@@ -9,10 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import{ HttpClientModule } from '@angular/common/http';
 
+import { ComponentsModule } from 'src/app/components/components.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ComponentsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
