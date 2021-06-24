@@ -1,7 +1,7 @@
 <app-header titulo="Registro de Egresos"></app-header> 
 
 <ion-content>
-    <ion-card>
+    <ion-card color="dark">
         <ion-card-header>
             <ion-card-subtitle>Formulario de registro de egresos</ion-card-subtitle>
             <ion-card-title>Egresos</ion-card-title>
@@ -24,5 +24,11 @@
             </ion-item>
         </ion-card-content>
     </ion-card>
-    <ion-button (click)="enviarEgreso()" expand="full">Registrar</ion-button>
+    <ion-button  expand="block"  fill="outline" color="primary" (click)="enviarEgreso()">Registrar</ion-button>
+    <ion-button routerLink="/inicio" expand="block" fill="outline" color="primary">Cancelar</ion-button>
+    <ion-fab vertical="bottom" slot="fixed" horizontal="end">
+        <ion-fab-button routerLink="/inicio" color="morado">
+          <ion-icon name="home"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
 </ion-content>

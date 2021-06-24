@@ -26,6 +26,14 @@ export class FormulaService {
   obtenerEgreso(){
     return this.http.get(`${this.backend1}/obtener-egresos`);
   }
+  obtenerOpts(){
+    return this.http.get<Componente>(`/assets/data/menu.json`);
+  }
 
 
+}
+interface Componente {
+  icon: string;
+  name: string;
+  direccion: string;
 }

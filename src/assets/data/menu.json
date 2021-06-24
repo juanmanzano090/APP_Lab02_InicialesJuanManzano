@@ -1,0 +1,26 @@
+[
+    {
+      "icon": "person-add",
+      "name": "Registrar Usuarios",
+      "direccion": "/registro-de-usuario"
+  
+    },
+    {
+      "icon": "list",
+      "name": "Usuarios",
+      "direccion": "/listar-usuarios"
+  
+    },
+    {
+      "icon": "logo-usd",
+      "name": "Registrar Egresos",
+      "direccion": "/registro-de-egresos"
+  
+    },
+    {
+      "icon": "trending-up",
+      "name": "Egresos de Usuarios",
+      "direccion": "/listar-egresos"
+  
+    }
+  ]

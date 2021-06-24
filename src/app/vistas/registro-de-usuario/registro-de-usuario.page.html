@@ -28,7 +28,14 @@
         </ion-item><br>
       
     </ion-card>
-    <ion-button expand="block" size="large" fill="outline" color="success" (click)="enviarDatos()" >Registrar</ion-button>
-
+    <ion-button expand="block" fill="outline" color="success" (click)="enviarDatos()" >Registrar</ion-button>
+    <ion-button routerLink="/inicio" expand="block" fill="outline" color="success">Cancelar</ion-button>
+<ion-fab vertical="bottom" slot="fixed" horizontal="end">
+  <ion-fab-button routerLink="/inicio" color="morado">
+    <ion-icon name="home"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
     </ion-content>
+
+    
 

@@ -2,7 +2,10 @@
 
 <ion-content>
     
-        <ion-card  color="primary" mode= "ios" *ngFor="let dato_obtenido of datos_obtenidos">
+        <ion-card  color="morado" mode= "ios" *ngFor="let dato_obtenido of datos_obtenidos">
+            <ion-card-header>
+                <ion-card-title>Usuario: {{dato_obtenido.nombre}}</ion-card-title>
+             </ion-card-header>
             <ion-item>
                 Nombre: {{dato_obtenido.nombre}}
             </ion-item>
@@ -19,6 +22,12 @@
                 Password: {{dato_obtenido.password}}
             </ion-item>
         </ion-card>
+
+        <ion-fab vertical="bottom" slot="fixed" horizontal="end">
+            <ion-fab-button routerLink="/inicio" color="morado">
+              <ion-icon name="home"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
      
 
 </ion-content>

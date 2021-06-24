@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -9,44 +10,24 @@ import { Component, OnInit } from '@angular/core';
 
 export class InicioPage implements OnInit {
 
-componentes: Componente[] = [
-  {
-    icon: 'person-add',
-    name: 'Registrar Usuarios',
-    direccion: '/registro-de-usuario'
+  constructor(private menu: MenuController) { }
 
-  },
-  {
-    icon: 'list',
-    name: 'Usuarios',
-    direccion: '/listar-usuarios'
-
-  },
-  {
-    icon: 'logo-usd',
-    name: 'Registrar Egresos',
-    direccion: '/registro-de-egresos'
-
-  },
-  {
-    icon: 'trending-up',
-    name: 'Egresos de Usuarios',
-    direccion: '/listar-egresos'
-
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
-];
 
+  openEnd() {
+    this.menu.open('end');
+  }
 
-
-  constructor() { }
-
+  openCustom() {
+    this.menu.enable(true, 'custom');
+    this.menu.open('custom');
+  }
 
   ngOnInit() {
   }
 
 }
-interface Componente {
-  icon: string;
-  name: string;
-  direccion: string;
-}
+

@@ -2,6 +2,9 @@
 
 <ion-content>
     <ion-card color="primary" mode= "ios" *ngFor= "let dato_obtenido of datos_obtenidos">
+        <ion-card-header>
+            <ion-card-title >Usuario: {{dato_obtenido.id_usuario.nombre}}</ion-card-title>
+         </ion-card-header>
         <ion-item>
           Descripcion: {{dato_obtenido.descripcion}}
         </ion-item>
@@ -9,9 +12,11 @@
         <ion-item >
             Precio: {{dato_obtenido.precio}}
         </ion-item>
-        <ion-item >
-            Usuario: {{dato_obtenido.id_usuario.nombre}}
-        </ion-item>
-
     </ion-card>
+
+    <ion-fab vertical="bottom" slot="fixed" horizontal="end">
+        <ion-fab-button routerLink="/inicio" color="morado">
+          <ion-icon name="home"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
 </ion-content>
