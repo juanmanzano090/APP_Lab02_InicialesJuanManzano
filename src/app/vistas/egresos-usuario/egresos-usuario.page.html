@@ -1,0 +1,31 @@
+<app-header titulo="Egreso de Usuario"></app-header> 
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-subtitle>registro de egresos de Usuario</ion-card-subtitle>
+        <ion-card-title>Egreso</ion-card-title>
+     </ion-card-header>
+    <ion-card-content>
+        <ion-item>
+            <ion-select [(ngModel)]="datos_id.id_usuario" placeholder="Seleccionar">
+                <ion-select-option  *ngFor="let dato_obtenido of datos_obtenidos"
+                [value]="dato_obtenido._id" >{{dato_obtenido.nombre}}
+                </ion-select-option>
+             </ion-select>
+        </ion-item>
+        <ion-button expand="block" fill="outline" color="success" (click)="enviarId()" >Registrar</ion-button>
+
+        <ion-item>
+          Descripcion: {{datos_egresos.descripcion}}
+        </ion-item>
+  
+        <ion-item >
+            Precio: {{datos_egresos.precio}}
+        </ion-item>
+  
+
+    </ion-card-content>
+</ion-card>
+
+</ion-content>

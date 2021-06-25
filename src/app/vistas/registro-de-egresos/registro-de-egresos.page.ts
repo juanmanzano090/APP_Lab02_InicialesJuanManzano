@@ -35,8 +35,8 @@ export class RegistroDeEgresosPage implements OnInit {
       (response:any)=>{
         if(response.egreso){
           this.router.navigateByUrl('/inicio') 
-
-          alert("datos registrados correctamente")
+          console.log("registrado correctamente")
+         
         }else{
           alert("datos no registrados")
         }

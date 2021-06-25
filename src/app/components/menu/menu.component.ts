@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FormulaService } from '../../servicios/formula.service';
+import { Componente } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-menu',
@@ -19,8 +20,4 @@ export class MenuComponent implements OnInit {
   }
 
 }
-interface Componente {
-  icon: string;
-  name: string;
-  direccion: string;
-}
+

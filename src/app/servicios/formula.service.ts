@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
+import { Componente } from '../interfaces/interfaces';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -29,11 +32,8 @@ export class FormulaService {
   obtenerOpts(){
     return this.http.get<Componente>(`/assets/data/menu.json`);
   }
+  usuarioEgreso(id){
+    return this.http.get(`${this.backend1}/obtener-egresos-usuario/${id}`);
+  }
 
-
-}
-interface Componente {
-  icon: string;
-  name: string;
-  direccion: string;
 }

@@ -1,9 +1,9 @@
 <app-header titulo="Lista de Egresos"></app-header> 
 
 <ion-content>
-    <ion-card color="primary" mode= "ios" *ngFor= "let dato_obtenido of datos_obtenidos">
+    <ion-card color="morado" mode= "ios" *ngFor= "let dato_obtenido of datos_obtenidos">
         <ion-card-header>
-            <ion-card-title >Usuario: {{dato_obtenido.id_usuario.nombre}}</ion-card-title>
+            <ion-card-title class="tamano">Usuario: {{dato_obtenido.id_usuario?.nombre}}</ion-card-title>
          </ion-card-header>
         <ion-item>
           Descripcion: {{dato_obtenido.descripcion}}

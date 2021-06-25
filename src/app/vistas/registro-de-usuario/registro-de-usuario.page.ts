@@ -32,7 +32,7 @@ export class RegistroDeUsuarioPage implements OnInit {
     this.formulaService.registrousuario(this.datos_usuario).subscribe(
       (response:any)=>{
         if(response.usuario){
-          alert("datos registrados correctamente")
+        console.log("registrado correctamente")
         }else{
           alert("datos no registrados")
         }

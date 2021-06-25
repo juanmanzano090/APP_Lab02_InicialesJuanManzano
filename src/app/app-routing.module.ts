@@ -28,6 +28,11 @@ const routes: Routes = [
     path: 'listar-egresos',
     loadChildren: () => import('./vistas/listar-egresos/listar-egresos.module').then( m => m.ListarEgresosPageModule)
   },
+  {
+    path: 'egresos-usuario',
+    loadChildren: () => import('./vistas/egresos-usuario/egresos-usuario.module').then( m => m.EgresosUsuarioPageModule)
+  },
+
 ];
 
 @NgModule({

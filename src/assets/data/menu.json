@@ -6,7 +6,7 @@
   
     },
     {
-      "icon": "list",
+      "icon": "people",
       "name": "Usuarios",
       "direccion": "/listar-usuarios"
   
@@ -19,8 +19,14 @@
     },
     {
       "icon": "trending-up",
-      "name": "Egresos de Usuarios",
+      "name": "Egresos",
       "direccion": "/listar-egresos"
+  
+    },
+    {
+      "icon": "search",
+      "name": "Egresos de Usuario",
+      "direccion": "/egresos-usuario"
   
     }
   ]

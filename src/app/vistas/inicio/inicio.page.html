@@ -1,20 +1,31 @@
 <ion-header>
-  <ion-toolbar> 
+  <ion-toolbar color="morado"> 
     <ion-buttons slot="start">
-      <ion-menu-button color="primary" menu="first"></ion-menu-button>
+      <ion-menu-button color="light" menu="first"></ion-menu-button>
     </ion-buttons>
-    <ion-title mode="ios">inicio</ion-title>
+    <ion-title class="tamano" mode="ios">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-list>
-      <ion-item *ngFor="let c of componentes" [routerLink]="c.direccion" detail>
-        <ion-icon slot="start"   [name]="c.icon">
-       </ion-icon>{{c.name}}
-      </ion-item>
-    </ion-list>
+  <ion-card class="bg">
+    <ion-item> <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+      <ion-card-header>
+       
+        <ion-card-subtitle>Formulario de Registros de Usuario</ion-card-subtitle>
+
+        <ion-card-title>Bienvenido</ion-card-title>
+      </ion-card-header>    
+    </ion-item>
+      <ion-card-content>
+        En esta aplicacion es para los clientes o usuarios en esta
+        plataforma se registren sus egresos, usted podra empezar a 
+        navegar por esta aplicacion por el boton menu que se encuentra
+        ubicado en la parte superior izquierda.
+      </ion-card-content>
+  </ion-card>
+
 </ion-content>
 
 
